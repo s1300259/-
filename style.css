@@ -1,0 +1,200 @@
+/* 全体的なスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #3e4e5e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 本を追加するフォームのスタイル */
+#add-book-section {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-book-section h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="file"],
+form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #3e4e5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2d3b4d;
+}
+
+/* プレビュー画像のスタイル */
+#image-preview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* 本棚のレイアウト */
+#bookshelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 本のデザイン */
+.book {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+.book-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ホバー時のエフェクト */
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ポップアップの背景 */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 背景の透明度を調整 */
+}
+
+/* ポップアップのコンテンツ */
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto; /* 上下の余白を減らして、中央に配置 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* 幅を小さく設定 */
+    max-width: 400px; /* 最大幅を設定 */
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* ポップアップの本のカバー */
+.popup-book-cover {
+    width: 80%; /* 画像のサイズを調整して小さくする */
+    max-height: 200px; /* 高さの最大値を設定 */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px; /* 閉じるボタンを小さく */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* コメントエリア */
+#book-comment {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px; /* 余白を小さく */
+    margin-bottom: 10px;
+}
+
+#save-comment {
+    padding: 8px 16px; /* ボタンサイズを調整 */
+    background-color: #3e4e5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#save-comment:hover {
+    background-color: #2d3b4d;
+}
+
+#saved-comment {
+    margin-top: 10px;
+    color: #333;
+}
+
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+

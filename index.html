@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本棚デザイン</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>マイ本棚</h1>
+    </header>
+
+    <main>
+        <!-- 本を追加するフォーム -->
+        <section id="add-book-section">
+            <h2>本を追加する</h2>
+            <form id="add-book-form">
+                <label for="book-title">本のタイトル:</label>
+                <input type="text" id="book-title" required>
+
+                <label for="book-cover">本の画像を選択:</label>
+                <input type="file" id="book-cover" accept="image/*" required>
+
+                <button type="submit">本を追加</button>
+            </form>
+            <div id="image-preview"></div>
+        </section>
+        <div id="book-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <img id="popup-book-cover" class="popup-book-cover" alt="Book Cover">
+                <h2 id="popup-book-title"></h2>
+                <label for="book-comment">コメント:</label>
+                <textarea id="book-comment" rows="5" placeholder="コメントを入力してください"></textarea>
+                <button id="save-comment">コメントを保存</button>
+                <div id="saved-comment"></div>
+            </div>
+        </div>
+
+        <!-- 本棚のエリア -->
+        <div id="bookshelf">
+            <!-- 本はここにJavaScriptで追加される -->
+        </div>
+        <!-- ポップアップ（モーダル） -->
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
